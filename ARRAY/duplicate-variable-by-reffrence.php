@@ -1,4 +1,5 @@
 <?php
+    // reffernce variable modify main variable
     // $variable1 = array('apple', 'banana', 'mango');
     // // $variable2 = $variable1;
     // $variable2 = &$variable1;
@@ -14,7 +15,7 @@
         'jackfruits',
         'tamerrit'
     );
-    $newspliceText = array_splice($fruits, -3, 3, $replacedFruits);
+    $newspliceText = array_splice($fruits, -3, 3, $replacedFruits); // replace original variable
     var_dump($newspliceText);
     var_dump($fruits);
 ?>

@@ -12,7 +12,7 @@ $offset = array_search(13, $numbers);
 if(key_exists('m', $arr)) {
     echo 'exists';
 }
-// $case_sensitive_sort = ['apple', 'Apple', 'banana', 'Banana', 'pinapple', 'Pinapple'];
+$case_sensitive_sort = ['apple', 'Apple', 'banana', 'Banana', 'pinapple', 'Pinapple'];
 // sort($case_sensitive_sort);
 // sort($case_sensitive_sort, SORT_FLAG_BASE); // insensitive sort
 // var_dump($case_sensitive_sort);
@@ -23,4 +23,4 @@ if(key_exists('m', $arr)) {
 // rsort($arr);
 // ksort($arr); // sort by key
 
-// print_r($arr);
+print_r($case_sensitive_sort);
