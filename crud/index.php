@@ -1,8 +1,13 @@
 <?php
 include_once 'inc/functions.php';
+session_start();
 $info = '';
 $task = $_GET['task'] ?? 'report';
 if('seed' == $task) {
+    if(!isAdmin()) {
+        header('location: index.php?task=report');
+        return;
+    }
     seed();
     $info = "Seeding is complete";
 }
@@ -64,6 +69,10 @@ if(isset($_POST['submit'])) {
             <div class="alert alert-danger">Sorry! Duplicate Rull Number</div>
         <?php endif; ?>
         <?php if('delete' == $task) : 
+            if(!isAdmin()) {
+                header('location: index.php?task=report');
+                return;
+            }
             $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING);
             if($id > 0) {
                 deleteStudent($id);
@@ -95,6 +104,10 @@ if(isset($_POST['submit'])) {
             </form>
         <?php endif; ?>
         <?php if('edit' == $task) : 
+            if(!hasPrivilege()) {
+                header('location: index.php?task=report');
+                return;
+            }
             $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_STRING);
             $student = getStudent($id); 
             if($student) :  

@@ -43,14 +43,20 @@ function generate_report() {
             <tr>
                 <th>Name</th>
                 <th>Roll</th>
+                <?php if(isAdmin() || isEditor()) : ?>
                 <th>Action</th>
+                <?php endif; ?>
             </tr>
             <?php
             foreach($students as $student) {?>
                 <tr>
                     <td><?php printf("%s %s", $student['fname'], $student['lname']); ?></td>
                     <td><?php printf("%s", $student['roll'])?></td>
-                    <td><?php printf('<a href="/crud/index.php?task=edit&id=%s">Edit</a> | <a class="delete" href="/crud/index.php?task=delete&id=%s">Delete</a>', $student['id'], $student['id'])?></td>
+                    <?php if(isAdmin()) : ?>
+                        <td><?php printf('<a href="/crud/index.php?task=edit&id=%s">Edit</a> | <a class="delete" href="/crud/index.php?task=delete&id=%s">Delete</a>', $student['id'], $student['id'])?></td>
+                        <?php elseif(isEditor()) : ?>
+                            <td><?php printf('<a href="/crud/index.php?task=edit&id=%s">Edit</a>', $student['id'])?></td>
+                    <?php endif; ?>
                 </tr>
             <?php }
             ?>
@@ -128,4 +134,13 @@ function deleteStudent($id) {
 function getNewID($students) {
     $maxID = max(array_column($students, 'id'));
     return $maxID + 1;
+}
+function isAdmin() {
+    return (isset($_SESSION['role']) && 'admin' == $_SESSION['role']);
+}
+function isEditor() {
+    return (isset($_SESSION['role']) && 'editor' == $_SESSION['role']);
+}
+function hasPrivilege() {
+    return (isAdmin() || isEditor());
 }
