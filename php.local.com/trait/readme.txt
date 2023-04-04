@@ -1,0 +1,1 @@
+#common method gulu trait er modddhe rakhbo ebong pore use korbo
