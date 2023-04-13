@@ -1,0 +1,268 @@
+/*
+************
+*************************
+29. Cart
+******************************************************* 
+*************************************************************** */
+@use '../abstracts/variables' as *;
+
+
+.karx-shopping-cart-table {
+    overflow-x: auto;
+    &.table-full {
+        & table {
+            @media #{$lg} {
+                width: 100%;
+            }
+        }
+    }
+    & table {
+        border-radius: 5px;
+        border: 1px solid #dedede;
+        width: 100%;
+        @media #{$lg, $md, $xs} {
+            width: 774px;
+        }
+        & thead {
+            & th {
+                font-weight: 500;
+                font-size: 16px;
+                padding: 25px 0;
+                color: #1d1d1e;
+                border-bottom: 1px solid #dedede;
+                padding-right: 15px;
+                padding-left: 15px;
+                &:first-child {
+                    padding-left: 25px;
+                }
+            }
+        }
+        & tbody {
+            & td {
+                vertical-align: middle;
+                padding: 30px 15px;
+                & .karx-product-cart-price {
+                    font-size: 16px;
+                    color: $font-color;
+                }
+            }
+        }
+    }
+    & tr {
+        &:not(:last-child) {
+            & tbody {
+                & td {
+                    border-bottom: 1px solid #dedede;
+                }
+            }
+        }
+    }
+}
+.table>:not(:last-child)>:last-child>* {
+    border-bottom-color: #dedede;
+}
+.karx-shopping-cart-product-box {
+    align-items: center;
+    display: flex;
+    & > * {
+        flex: 0 0 auto;
+    }
+    & .image {
+        width: 64px;
+        margin-right: 22px;
+    }
+    & .title-wrap {
+        overflow: hidden;
+        & .title {
+            font-size: 16px;
+            margin-bottom: 0;
+            font-weight: 500;
+            & a {
+                text-decoration: none;
+                &:hover {
+                    color: $primary_color;
+                }
+            }
+        }
+    }
+}
+.karx-cart-times-btn {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    color: $font-color;
+    text-align: center;
+    display: inline-block;
+    transition: 0.3s;
+    &:hover {
+        color: $primary_color;
+    }
+}
+.karx-cart-total-box-2 {
+    border: 1px solid #dedede;
+    padding-bottom: 40px;
+    & ul {
+        & li {
+            & .label {
+                font-weight: 500;
+                font-size: 16px;
+                display: inline-block;
+                color: $secendary_color;
+            }
+            & .price {
+                font-size: 16px;
+                color: $secendary_color;
+                float: right;
+            }
+        }
+    }
+    & ul {
+        padding: 0 25px;
+        & li {
+            list-style-type: none;
+            border-bottom: 1px solid #dedede;
+            padding: 20px 0;
+            &.has-cart-checkout-list-form-style {
+                border: 0;
+                padding: 0;
+            }
+        }
+        & .list {
+            & li {
+                padding: 0 10px;
+            }
+        }
+    }
+    & .nice-select {
+        float: right;
+        height: auto;
+        border: 0;
+        padding: 0;
+        padding-right: 20px;
+        line-height: 1;
+        margin-top: 5px;
+        & span.current {
+            font-size: 16px;
+            color: $primary_color;
+        }
+        &::after {
+            display: none;
+        }
+        &::before {
+            content: "\f107";
+            font-family: "Font awesome 5 pro";
+            right: 0;
+            top: 3px;
+            position: absolute;
+            color: $primary_color;
+            font-weight: 500;;
+        }
+    }
+    & .title {
+        margin-bottom: 0;
+        font-weight: 500;
+        font-size: 18px;
+        border-bottom: 1px solid #dedede;
+        padding: 25px 25px;
+    }
+}
+.cart-checkout-form-btn {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    height: 55px;
+    width: 100%;
+    border: 0;
+    display: inline-block;
+    background: $secendary_color;
+    border-radius: 5px;
+    line-height: 55px;
+    text-decoration: none;
+    &-2 {
+      @extend .cart-checkout-form-btn;
+      background-color: $secendary_color;
+      color: #fff;
+      &:hover {
+            background: $primary_color;
+            color: #fff;
+        }
+    }
+    &:hover {
+        background-color: $primary_color;
+        color: #fff;
+    }
+}
+.pl-20.karx-cart-widget-left-space {
+    @media #{$md, $xs} {
+        padding-left: 0;
+    }
+}
+
+.karx-single-product-popup-quantity-box {
+
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    background: #dedede;
+    position: relative;
+
+    input {
+        width: 100%;
+        border: 0;
+        background: transparent;
+        height: 40px;
+        text-align: center;
+        font-size: 16px;
+        color: $secendary_color;
+        font-weight: 700;
+    }
+
+    .plus {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 0;
+        right: 16px;
+        background-color: transparent;
+        transition: 0.3s;
+    
+        &:hover {
+            color: $primary_color;
+        }
+    }
+    .minus {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 0;
+        left: 16px;
+        background-color: transparent;
+        transition: 0.3s;
+    
+        &:hover {
+            color: $primary_color;
+        }
+    }
+}
+
+.cart-checkout-form-btn, .cart-checkout-form-btn-2 {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    height: 60px;
+    width: 100%;
+    border: 0;
+    display: inline-block;
+    background: $secendary_color;
+    border-radius: 5px;
+    line-height: 60px;
+    text-decoration: none;
+    transition: 0.3s;
+    
+    &:hover {
+        background-color: $primary_color;
+        color: #fff;
+    }
+}

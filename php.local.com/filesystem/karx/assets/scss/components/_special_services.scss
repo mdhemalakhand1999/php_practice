@@ -1,0 +1,130 @@
+@use '../abstracts/variables' as *;
+
+/*
+************
+*************************
+23. Special Services
+******************************************************* 
+*************************************************************** */
+
+.mbuptoxl-110 {
+    @media #{$xs, $md, $lg, $xl} {
+        margin-bottom: 110px;
+    }
+}
+.mbuptoxl-120 {
+    @media #{$xs, $md, $lg, $xl} {
+        margin-bottom: 120px;
+    }
+}
+
+.karx-popular-service-area.pt-115 {
+    @media #{$xs, $md, $lg, $xl} {
+        padding-top: 120px;
+    }
+}
+.karx-company-benefits-title{
+    font-size: 30px;
+    font-weight: 700;
+}
+.karx-popular-service-left{
+    background: #fff;
+}
+.items-icon{
+    i{ 
+        height:50px;
+        width:50px;
+        border-radius:50%;
+        text-align: center;
+        line-height: 50px;
+        background-color: #f6f6f6;
+        font-size: 20px;
+    }
+}
+.items-text-wrapper{
+    .item-heading{
+        font-size: 24px;
+        font-weight: 700;
+    }
+    p{
+        font-size: 16px;
+        list-style: none;
+    }
+}
+.popular-slider-card{
+    background: #fff;
+    &:hover img{
+        animation: icon-bounce 0.8s 1;
+    }
+    .popular-slider-card-title{
+        font-size: 24px;
+        font-weight: 700;
+        &:hover {
+            a {
+                color: $primary_color;
+            }
+        }
+    }
+}
+.popular-slider-card.pl-40.pr-40 {
+    @media #{$xxl} {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+.popular-slider-card-item-list{
+    ul{
+        li{
+            list-style: none;
+            position: relative;
+            padding-left: 20px;
+
+            &::before{
+               content: "";
+               height: 7px;
+               width: 7px;
+               background: $secendary_color;
+               left: 0;
+               top: 8px;
+               position: absolute;
+               border-radius: 50%;
+               -webkit-border-radius: 50%;
+               -moz-border-radius: 50%;
+               -ms-border-radius: 50%;
+               -o-border-radius: 50%;
+         }
+         &:last-child{
+              padding-bottom: 5px;
+         }
+        }
+    }
+}
+.popular-service-subtitle{
+    font-size: 20px;
+    font-weight: 700;
+    color: #ff630e;
+    text-transform: capitalize;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.popular-service-title {
+    font-size: 46px;
+    font-weight: 700;
+    @media #{$md} {
+        font-size: 42px;
+    }
+    @media #{$xs} {
+        font-size: 32px;
+    }
+    @media #{$sm} {
+        font-size: 36px;
+    }
+}
+
+.slider-icon-wraper {
+    display: inline-flex;
+    font-size: 20px;
+    div:not(:last-child) {
+        margin-right: 15px;
+    }
+}

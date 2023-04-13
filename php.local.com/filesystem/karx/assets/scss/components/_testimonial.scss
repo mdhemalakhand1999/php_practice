@@ -1,0 +1,282 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/*
+************
+*************************
+16. Testimonial
+******************************************************* 
+*************************************************************** */
+
+.karx-testimonial-area {
+    position: relative;
+}
+
+.testimonial-shape-1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.testimonial-shape-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.karx-testimonial-bg {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.karx-testimonial-box {
+    background: $white-color;
+}
+
+.karx-testimonial-star {
+    i {
+        display: inline-block;
+        color: $primary_color;
+        font-size: 16px;
+        margin-right: 5px;
+    }
+
+}
+
+.karx-testimonial-person-wrapper {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #e8e7e7;
+    padding: 40px;
+    @media #{$xs} {
+        padding: 40px 30px;
+    }
+    @media #{$sm} {
+        padding: 40px;
+    }
+}
+.testimonial-person-text {
+    p {
+        margin-bottom: 0;
+    }
+}
+.test-author {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 5px;
+    @media #{$md}{
+        font-size: 22px;
+    }
+    @media #{$xs}{
+        font-size: 18px;
+    }
+    @media #{$sm}{
+        font-size: 22px;
+    }
+    a {
+        color: $secendary_color;
+    }
+    &:hover {
+        a {
+            color: $primary_color;
+        }
+    }
+}
+.karx-testimonial-slide-btn {
+    margin-top: 50px;
+
+    .testimonial-pagination {
+        text-align: center;
+
+        span {
+            background-color: $secendary_color;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 0px 5px;
+
+            &.swiper-pagination-bullet-active {
+                border: 6px solid #fff;
+                outline: 1px solid #000;
+            }
+        }
+    }
+
+}
+
+.karx-testimonial-text {
+    padding: 50px 40px;
+    @media #{$xs} {
+        padding: 50px 30px;
+    }
+    @media #{$sm} {
+        padding: 50px 40px;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
+
+// ------------------------ home page 2 ---------------------
+
+.karx-testimonial-slider-content {
+
+    i {
+        display: inline-block;
+        font-size: 70px;
+        color: $primary_color;
+        margin-bottom: 50px;
+    }
+    h6 {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 42px;
+        color: $font-color;
+    }
+}
+.karx-testimonial-person {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .testimonial-person-img {
+        width: 90px;
+        height: 90px;
+        margin-right: 20px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .testimonial-person-name {
+        a {
+            text-transform: capitalize;
+            font-size: 24px;
+            font-weight: 500;
+            color: $secendary_color;
+
+            &:hover {
+                color: $primary_color;
+            }
+        }
+        span {
+            color: $font-color;
+            font-size: 15px;
+            display: block;
+        }
+
+    }
+}
+.karx_testimonial_thumbs_active {
+
+    .swiper-slide.swiper-slide-thumb-active {
+        .testimonial-person-name {
+            a {
+                color: #ff630e;
+            }
+        }
+    }
+}
+.karx-test-width {
+    width: 100%;
+}
+
+.karx-testimonial-slider-area {
+    position: relative;
+}
+.karx-test2-message-navigation {
+    span {
+        display: inline-block;
+        color: #707480;
+        position: absolute;
+        left: -60px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        @media #{$lg} {
+            left: -30px;
+        }
+        @media #{$md} {
+            left: -20px;
+        }
+        @media #{$xs} {
+            display: none;
+        }
+            i {
+                font-size: 40px;
+                font-weight: 300;
+            }
+        &:hover {
+            color: #ff630e;
+        }
+    }
+    span.karx-testimonial-2-slide-next {
+        left: auto;
+        right: -60px;
+        @media #{$lg} {
+            right: -30px;
+        }
+        @media #{$md} {
+            right: -20px;
+        }
+    }
+}
+.testimonial-2-wrapper {
+    &:hover {
+        .karx-test2-message-navigation {
+            span {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+ 
+.popular-slider-body-prev {
+    color: #1a213e;
+}
+.popular-slider-body-next {
+    color: #1a213e;
+}
+.karx-popular-service-left.pl-60.pr-60 {
+    @media #{$xxl} {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    @media #{$xs} {
+        padding: 50px 40px;
+        padding-bottom: 25px;
+    }
+    @media #{$sm} {
+        padding: 60px 50px;
+        padding-bottom: 35px;
+    }
+}
+.karx-popular-service-right.ml-40 {
+    @media #{$xs, $md, $lg, $xl} {
+        margin-left: 0;
+    }
+}
+.karx-company-benefits-items.d-flex {
+    @media #{$xs} {
+        flex-direction: column;
+    }
+    @media #{$sm} {
+        flex-direction: row;
+    }
+}
+.items-icon.mr-30 {
+    @media #{$xs} {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    @media #{$sm} {
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+}

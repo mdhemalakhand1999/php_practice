@@ -1,0 +1,234 @@
+@use '../abstracts/variables' as *;
+
+/*
+************
+*************************
+31. Footer
+******************************************************* 
+*************************************************************** */
+
+.karx-footer-area {
+    background: $secendary_color;
+}
+
+.karx-footer-top {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 60px 0px;
+}
+.karx-footer-brandactive {
+    .swiper-wrapper {
+        align-items: center;
+    }
+}
+
+.footer-widget-logo {
+    width: 180px;
+    display: inline-block;
+    margin-bottom: 30px;
+    img {
+        width: 100%;
+    }
+}
+.karx-foote-info {
+    p {
+        font-size: 16px;
+        color: #fff;
+    }
+}
+.footer-follow-label {
+    font-size: 24px;
+    color: #fff;
+    @media #{$lg,$md,$xs}{
+        font-size: 20px;
+    }
+}
+.karx-footer-follow-link {
+    a {
+        display: inline-block;
+        color: #fff;
+        font-size: 18px;
+        margin-right: 5px;
+        width: 45px;
+        height: 45px;
+        background-color: #fff;
+        text-align: center;
+        border-radius: 3px;
+        color: #1a213e;
+        line-height: 45px;
+        &:hover {
+            color: #FF630E;
+        }
+    }
+}
+.karx-footer-widget-title {
+    font-size: 28px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    line-height: 1;
+    @media #{$lg,$md,$xs}{
+        font-size: 24px;
+    }
+ 
+    &:after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 25%;
+        height: 4px;
+        content: "";
+        background-color: #ff630e;
+    }
+}
+.karx-footer-widget {
+
+    @media #{$xl,$lg,$md,$xs}{
+       padding-left:0;
+    }
+
+    ul {
+        li {
+            list-style: none;
+            display: block;
+            a {
+                color: #fff;
+                font-size: 16px;
+                font-weight: 500;
+                &:hover {
+                    color: #ff630e;
+                }
+            }
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    p {
+        color: #fff;
+        font-size: 16px;
+        label {
+            display: block;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 0px;
+        }
+        a {
+            color: #fff;
+            &:hover {
+                color: #ff630e;
+            }
+        }
+    }
+    button[type="submit"] {
+        height: 60px;
+        padding: 0 30px;
+        border: 0;
+        background-color: #ff630e;
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        border-radius: 3px;
+        transition: 0.3s;
+        font-weight: 500;
+        i {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        &:hover {
+            background-color: #fff;
+            color: #ff630e;
+        }
+    }
+}
+
+  .karx-footer-input-btn {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 15px;
+    input {
+        height: 60px;
+        width: 100%;
+        padding: 0 25px;
+        border: 0;
+        padding-right: 60px;
+        border-radius: 3px;
+    }
+    i {
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-align: center;
+        line-height: 60px;
+        color: #ff630e;
+    }
+
+}
+
+
+.footer-copyright-border {
+    border-top: 1px solid #4d4d4d;
+}
+.karx-copyright-text {
+    p {
+        margin-bottom: 0;
+        color: #fff;
+        font-size: 16px;
+        a {
+            &:hover {
+                color: #ff630e;
+            }
+        }
+    }
+}
+.karx-copyright-menu {
+    ul {
+        list-style: none;
+        li {
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            a {
+                color: #fff;
+                padding: 10px 0;
+                display: inline-block;
+                &:hover {
+                    color: #ff630e;
+                }
+            }
+            &:not(:first-child) {
+                margin-left: 15px;
+                padding-left: 20px;
+                &:before {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: 1px;
+                    height: 14px;
+                    content: "";
+                    background-color: #fff;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
+.karx-foote-info.smpl-40 {
+    @media #{$md, $lg} {
+        padding-right: 40px;
+    }
+}
+
+@media #{$xl,$md}{
+.karx-footer-logo.text-center img {
+    max-width: 60%;
+  }
+}
+
+
+

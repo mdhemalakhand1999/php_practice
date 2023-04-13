@@ -1,0 +1,283 @@
+@use '../abstracts/variables' as *;
+
+/*
+************
+*************************
+28. Shop Details
+******************************************************* 
+*************************************************************** */
+
+.karx-shop-details-content-title {
+    font-size: 36px;
+    @media #{$xs} {
+        font-size: 28px;
+    }
+    @media #{$sm} {
+        font-size: 32px;
+    }
+}
+.karx-shop-details-contetn-price {
+    font-size: 24px;
+    font-weight: 500;
+    @media #{$xs} {
+        font-size: 22px;
+    }
+    @media #{$sm} {
+        font-size: 24px;
+    }
+}
+.karx-shop-details-content-rating {
+    a {
+        i {
+            color: #ff630e;
+        }
+    }
+    & > span {
+        display: inline-block;
+        margin-left: 10px;
+    }
+}
+.karx-shop-details-content-cart-action-wrap {
+	display: flex;
+	gap: 30px;
+    @media #{$xs} {
+        flex-direction: column;
+        gap: 0;
+    }
+    @media #{$sm} {
+        flex-direction: row;
+        gap: 30px;
+    }
+}
+.karx-shop-details-content-quantity-box {
+	width: 120px;
+	height: 60px;
+	background: transparent;
+	position: relative;
+	border: 1px solid #dee2e6;
+	display: inline-block;
+}
+.karx-shop-details-content-quantity-box .plus {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	border: 0;
+	right: 16px;
+	background-color: transparent;
+	color: #dee2e6;
+}
+.karx-shop-details-content-quantity-box input {
+	width: 100%;
+	border: 0;
+	background: transparent;
+	height: 60px;
+	text-align: center;
+	font-size: 16px;
+	color: #1a213e;
+	font-weight: 700;
+}
+.karx-shop-details-content-quantity-box .minus {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	border: 0;
+	left: 16px;
+	background-color: transparent;
+	color: #dee2e6;
+}
+.karx-shop-details-content-add-cart {
+	width: 370px;
+	height: 60px;
+	background: #1a213e;
+	display: inline-block;
+	text-align: center;
+	line-height: 60px;
+	font-weight: 600;
+	font-size: 16px;
+	color: #fff;
+	text-decoration: none;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+    @media #{$xs} {
+        width: 100%;
+    }
+    @media #{$sm} {
+        width: 370px;
+    }
+    &:hover {
+        background-color: #ff630e;
+        color: #fff;
+    }
+}
+.karx-shop-details-content-widget-action {
+	display: flex;
+    @media #{$xs} {
+        flex-direction: column;
+    }
+    @media #{$sm} {
+        flex-direction: row;
+    }
+}
+.karx-shop-details-content-widget-action-item {
+    &:not(:last-child) {
+        margin-right: 20px;
+        padding-right: 20px;
+        border-right: 1px solid #dee2e6;
+        @media #{$xs} {
+            margin-right: 0;
+            padding-right: 0;
+            border-right: 0;
+            margin-bottom: 10px;
+        }
+        @media #{$sm} {
+            margin-right: 20px;
+            padding-right: 20px;
+            border-right: 1px solid #dee2e6;
+            margin-bottom: 0;
+        }
+    }
+    a {
+        font-size: 16px;
+        font-weight: 500;
+        color: #1a213e;
+        &:hover {
+            color: #ff630e;
+        }
+        i {
+            margin-right: 10px;
+        }
+    }
+}
+
+.karx-shop-details-content-list {
+    ul {
+        li {
+            margin-bottom: 10px;
+            b {
+                font-size: 18px;
+                font-weight: 500;
+                color: #1a213e;
+                margin-right: 15px; 
+                display: inline-block;
+            }
+            a {
+                display: inline-block;
+                background-color: #f2f2f2;
+                padding: 5px 10px;
+                margin-right: 9px;
+                border-radius: 2px;
+                color: #1a213e;
+                &:hover {
+                    background-color: #ff630e;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.karx-single-shop-details-image.has-width {
+    img { 
+        width: 100%;
+    }
+}
+
+.karx-shop-details-info-tab-controls {
+    button {
+        border: 0;
+        background-color: #f2f2f2;
+        height: 60px;
+        line-height: 60px;
+        padding: 0 30px;
+        margin-right: 10px;
+        color: #1a213e;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 15px;
+        transition: 0.3s;
+        &:is(.active) {
+            background-color: #ff630e;
+            color: #fff;
+        }
+    }
+}
+.karx-description-list {
+    ul {
+        li {
+            list-style: none;
+            display: flex;
+            i {
+                display: inline-block;
+                margin-right: 10px;
+                color: #1a213e;
+                margin-top: 4px;
+              }
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+.karx-shop-details-review-title {
+    font-size: 24px;
+}
+.karx-shop-details-review-box-single {
+    display: flex;
+    .thumb {
+        margin-right: 30px;
+        flex: 0 0 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        height: 70px;
+        max-width: 70px;
+    }
+}
+.reviewer-info {
+    .title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
+.bz-border-bottom {
+    border-bottom: 1px solid #dee2e6;
+}
+.karx-shop-details-review-title {
+    font-size: 24px;
+}
+.karx-submit-form-default-single {
+    .condition-box {
+        display: flex;
+        gap: 10px;
+        .has-condition {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 0;
+            margin-top: 2px;
+            label.condition {
+                font-size: 16px;
+                color: #1a213e;
+            }
+        }
+    }
+}
+.karx-shop-details-content-list.border-top {
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+        }
+    }
+}
+.rating i, .karx-review-rating i {
+	color: #ff630e;
+}
+.karx-images-wrapper.mr-40 {
+    @media #{$xs, $md} {
+        margin-right: 0;
+    }
+}

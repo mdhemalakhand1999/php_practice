@@ -1,0 +1,56 @@
+@use '../abstracts/variables' as *;
+
+/*
+************
+*************************
+07. Top Service
+******************************************************* 
+*************************************************************** */
+
+.mbm-100 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -100px;
+}
+.karx-top-service-experience {
+    background: $white-color;
+    box-shadow: 0px -5px 15px 0px #8284861f;
+    padding: 60px 50px;
+    display: flex;
+    @media #{$xs} {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 30px;
+    }
+    @media #{$sm} {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: start;
+        padding: 50px 40px;
+    }
+}
+.text-box-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    @media #{$lg,$md, $xs}{
+        font-size: 24px;
+    }
+}
+
+.logo-box {
+    margin-right: 30px;
+    @media #{$xs} {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    @media #{$sm} {
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+}
+.text-box {
+    p {
+        margin-bottom: 0;
+    }
+}

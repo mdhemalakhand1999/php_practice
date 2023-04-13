@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as *;
+
+/*
+************
+*************************
+04. Breadcrumb
+******************************************************* 
+*************************************************************** */
+
+.karx-breadcrumb-title {
+    font-size: 72px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    @media #{$xs} {
+        font-size: 42px;
+    }
+    @media #{$sm} {
+        font-size: 52px;
+    }
+    @media #{$md} {
+        font-size: 60px;
+    }
+}
+
+.breadcrumb-navigation {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 18px;
+        color: #1a213e;
+        a {
+            position: relative;
+            z-index: 1;
+            display: block;
+            margin-right: 10px;
+            font-weight: 700;
+            &::after {
+                content: "\f068";
+                font-family: 'font awesome 5 Pro';
+                display: inline-block;
+                font-weight: 500;
+                margin-left: 15px;
+                font-weight: 300;
+                color: #1a213e;
+            }
+            &:hover {
+                color: #ff630e;
+            }
+        }
+    }
+}

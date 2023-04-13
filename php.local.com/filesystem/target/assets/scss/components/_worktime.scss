@@ -1,0 +1,161 @@
+@use '../abstracts/variables' as *;
+
+/*
+************
+*************************
+14. Work Time
+******************************************************* 
+*************************************************************** */
+
+.mtm-116 {
+    margin-top: -116px;
+}
+.karx-worktime-box {
+	position: relative;
+}
+.karx-worktime-title {
+
+    h2 {
+        font-size: 50px;
+        color: $white-color;
+        font-weight: 700;
+        @media #{$md}{
+            font-size: 42px;
+        }
+        @media #{$xs}{
+            font-size: 36px;
+        }
+    }
+
+}
+
+.karx-worktime-schedule {
+
+    ul {
+        list-style: none;
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $white-color;
+
+            p {
+                color: $white-color;
+                font-size: 20px;
+                font-weight: 600;
+                margin: 0;
+                padding: 15px 0;
+                text-transform: lowercase;
+                @media #{$xs} {
+                    font-size: 18px;
+                }
+                @media #{$sm} {
+                    font-size: 20px;
+                }
+            }
+        }
+        .border-bottom-none {
+            border-bottom: none;
+        }
+    }
+}
+
+.karx-worktime-btn {
+
+    a {
+        font-size: 20px;
+        font-weight: 500;
+        color: $white-color;
+        background: $primary_color;
+        padding: 20px 56px;
+        display: inline-block;
+
+        &:hover {
+            background: $secendary_color;
+            color: #fff;
+        }
+    }
+
+}
+
+.karx-worktime-box-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.karx-worktime-box-content {
+    padding: 30px;
+    .karx-worktime-content-title {
+        font-size: 46px;
+        font-weight: 700;
+        color: $white-color;
+        margin-bottom: 10px;
+        // @media #{$lg}{
+        //     font-size: 48px;
+        // }
+        @media #{$md}{
+            font-size: 42px;
+        }
+        @media #{$xs}{
+            font-size: 40px;
+        }
+    }
+    .karx-count-text {
+        font-size: 22px;
+        font-weight: 700;
+        color: $white-color;
+        @media #{$lg}{
+            font-size: 18px;
+        }
+         @media #{$md,$xs}{
+            font-size: 20px;
+        }
+    }
+}
+
+
+.karx-worktime-area {
+    position: relative; 
+}
+.karx-worktime-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    @media #{$md,$xs}{ 
+        width: 100%;
+    }
+}
+.karx-worktime-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    @media #{$md,$xs}{ 
+        width: 100%;
+        position: static;
+    }
+    iframe {
+        width: 100%;
+        height: 100%;
+        @media #{$md, $xs} {
+            height: 350px;
+        }
+    }
+}
+
+@media #{$md,$xs} {
+    .karx-worktime-content-box.pt-105.pr-100.pb-170 {
+        padding-right: 0;
+      }
+}
+
+.karx-worktime-content-box.pr-100 {
+    @media #{$xs, $md} {
+        padding-right: 0;
+    }
+}

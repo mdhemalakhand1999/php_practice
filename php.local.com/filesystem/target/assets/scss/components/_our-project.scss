@@ -1,0 +1,186 @@
+@use '../abstracts/variables' as *;
+
+/*
+************
+*************************
+15. Our Project
+******************************************************* 
+*************************************************************** */
+
+.karx-single-recent-project-box-1 {
+  position: relative;
+}
+
+.karx-single-recent-project-box-1 .karx-single-recent-project-content-wrapper-1 {
+  position: absolute;
+  background: $white-color;
+  left: 30px;
+  bottom: 30px;
+  padding: 30px;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 100px;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  border-left: 10px solid $primary_color;
+  @media #{$lg}{
+      left: 11px;
+  }
+  @media #{$md}{
+    left: 135px;
+    grid-gap: 100px;
+  }
+  @media #{$xs}{
+    left: 0px;
+    padding: 18px 14px;
+    grid-gap: 20px;
+  }
+  @media #{$sm}{
+    left: 90px;
+    grid-gap: 100px;
+  }
+ }
+
+.karx-single-recent-project-content-left-1 {
+
+    span.karx-single-recent-project-content-subtitle-1 {
+      font-size: 20px;
+      font-weight: 600;
+      color: $font-color;
+      display: inline-block;
+      margin-bottom: 5px;
+
+      @media #{$md}{
+        font-size: 18px;
+      }
+      @media #{$xs}{
+        font-size: 16px;
+      }
+      @media #{$sm}{
+        font-size: 18px;
+      }
+    }
+
+}
+  
+.karx-single-recent-project-box-1 .karx-single-recent-project-content-wrapper-1:is(.karx-single-recent-project-content-wrapper-2) {
+  left: 60px;
+  right: 60px;
+}
+
+.karx-single-plus-btn-link-1 {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  line-height: 70px;
+  text-align: center;
+  background: $primary_color;
+  color: $white-color;
+  font-size: 26px;
+  border-radius: 5px;
+}
+
+.karx-single-plus-btn-link-1:hover {
+  background: $secendary_color;
+  color: $white-color;
+} 
+
+.karx-single-recent-project-box-1 {
+  display: inline-block;
+}
+
+.karx-single-recent-project-content-title-1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+  @media #{$lg,$md}{
+    font-size: 24px;
+   }
+
+  @media #{$xs}{
+    font-size: 20px;
+  }
+  a {
+    text-decoration: none;
+    color: $secendary_color;
+    &:hover {
+      color: $primary_color;
+    }
+  }
+}
+
+
+.recent-project-active-1 .swiper-slide.swiper-slide-active .karx-single-recent-project-content-wrapper-1 {
+  opacity: 1;
+  visibility: visible;
+  box-shadow: 0px 10px 20px 0px rgba(130, 132, 134, 0.08);
+}
+
+div.karx-single-recent-project-box-1 img {
+  height: 560px;
+  object-fit: cover;
+  transition: all 0.5s;
+  width: 100%;
+}
+.swiper-slide.swiper-slide-active .karx-single-recent-project-box-1 img {
+  height: 580px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.recent-project-active-1.swiper-slide.swiper-slide-active {
+  margin-top: -20px;
+}
+
+.recent-project-active-1 .swiper-wrapper {
+  align-items: center;
+}
+
+.karx-single-recent-project-box-1 {
+  height: 580px;
+  display: flex;
+  align-items: center;
+}
+  
+.karx-single-recent-project-box-thumb-1 {
+  width: 100%;
+}
+
+div.karx-single-recent-project-box-thumb-1 img {
+  width: 100%;
+}
+  
+.karx-single-recent-project-box-thumb-2 {
+  width: 100%;
+}
+  
+div.karx-single-recent-project-box-thumb-2 img {
+  width: 100%;
+}
+.karx-our-project-progation {
+
+  .swiper-pagination.text-right.swiper-pagination-clickable.swiper-pagination-bullets {
+    right: 3%;
+  }
+
+  span {
+        background-color: $secendary_color;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin: 0px 15px;
+
+        &.swiper-pagination-bullet-active {
+          border: 6px solid $white-color;
+          outline: 1px solid $secendary_color;
+        }
+      }
+}
+
+.karx-recent-project-all .karx-recent-project-all-btn:hover {
+  color: $primary_color;
+  border-color: $primary_color;
+}
+

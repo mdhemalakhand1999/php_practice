@@ -1,0 +1,326 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/*
+************
+*************************
+11. Our Product
+******************************************************* 
+*************************************************************** */
+
+.karx-our-products-all-btn-wrapper {
+
+    .our-products-all-btn {
+        display: inline-block;
+        background-color: $primary_color;
+        color: $white-color;
+        font-size: 18px;
+        text-transform: capitalize;
+        font-weight: 600;
+        padding: 15px 40px;
+        border-radius: 30px;
+        justify-content: end;
+
+        i {
+            @include transition (.3s);
+        }
+
+        &:hover {
+            background-color: $secendary_color;
+
+            i {
+                transform: translateX(5px);
+                -webkit-transform: translateX(5px);
+                -moz-transform: translateX(5px);
+                -ms-transform: translateX(5px);
+                -o-transform: translateX(5px);
+            }
+        }
+    }
+}
+.karx-our-products-items {
+
+    &:hover {
+        .karx-our-products-hover-wrapper {
+            visibility: visible;
+            opacity: 1;
+            bottom: 0;
+        }
+    }
+}
+.karx-our-products-img {
+    position: relative;
+    margin-bottom: 25px;
+    overflow: hidden;
+
+    .karx-our-product-new {
+
+        span {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            background-color: $primary_color;
+            color: $white-color;
+            padding: 12px 35px;
+            position: absolute;
+            top: 0;
+            display: none;
+        }
+
+        &:is(.new-active) {
+           span {
+               display: inline-block;
+           }
+        }
+    }
+}
+.karx-our-products-hover-wrapper {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    bottom: -20%;
+    left: 0;
+    right: 0;
+    height: auto;
+    background-color: #ff630e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 25px;
+    margin: 0 30px;
+    @include transition(.3s);
+    @media #{$xs} {
+        padding: 30px 25px;
+        margin: 0 25px;
+    }
+    @media #{$sm} {
+        padding: 30px 25px;
+        margin: 0 30px;
+    }
+    a {
+        font-size: 18px;
+        color: #6a6b71;
+        background-color: $white-color;
+        border-radius: 50%;
+        padding: 15px 20px;
+        margin: 0 5px;
+
+        &:hover {
+            background-color: $secendary_color;
+            color: $white-color;
+        }
+    }
+}
+.karx-our-products-title {
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    color: $secendary_color;
+    &:hover {
+        a {
+            color: $primary_color;
+        }
+
+    }
+}
+.product-price {
+	font-size: 18px;
+	font-weight: 500;
+}
+.karx-our-products-buy-btn {
+    font-size: 16px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: $secendary_color;
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    padding: 0 30px;
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    i {
+        display: inline-block;
+        margin-left: 5px;
+    }
+    &:hover {
+        background-color: $primary_color;
+        border-color: $primary_color;
+        color: #fff;
+    }
+}
+
+/* Popular Products */
+
+.karx-popular-product-item-img {
+    flex: 0 0 90px;
+    max-width: 90px;
+    padding: 15px;
+    background-color: #fff;
+    margin-right: 20px;
+    &:hover{
+        filter: grayscale(90%);
+        -webkit-filter: grayscale(90%);
+}
+}
+.karx-popular-product-item {
+    display: flex;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+.karx-popular-product-item-rating {
+    margin-bottom: 5px;
+    i {
+        font-size: 12px;
+        font-weight: 700;
+        color: #ff5e14;
+    }
+}
+.karx-popular-product-item-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+    &:hover {
+        a {
+            color: $primary_color;
+        }
+    }
+}
+.karx-popular-product-item-content {
+    .product-price {
+        font-size: 14px;
+    }
+}
+
+.karx-product-list-wrapper {
+    &:hover {
+        .karx-our-products-hover-wrapper {
+            visibility: visible;
+            opacity: 1;
+            bottom: 0;
+        }
+    }
+}
+
+.karx-product-list-title {
+    font-size: 24px;
+    &:hover {
+        a {
+            color: $primary_color;
+        }
+    }
+}
+.karx-product-rating {
+    i {
+        font-size: 14px;
+        color: #ff630e;
+        display: inline-block;
+        font-weight: 700;
+    }
+    &:is(.d-block) {
+        margin-bottom: 5px;
+    }
+}
+.karx-our-products-buy-btn.pr-60.pl-60 {
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+.karx-product-list-wrapper {
+    .karx-our-products-img {
+        margin-bottom: 0;
+        @media #{$xs} {
+            margin-bottom: 35px;
+        }
+    }
+}
+.karx-product-list-content.pl-15 {
+    @media #{$xs} {
+        padding-left: 0;
+    }
+}
+.karx-our-products-title-wrapper.b-25.mb-lg-0 {
+    @media #{$sm} {
+        margin-bottom: 25px;
+    }
+}
+
+/*shop css*/
+
+.product-tab-buttons button {
+    border: 0;
+    background-color: #f2f2f2;
+    width: 60px;
+    height: 60px;
+    line-height: 64px;
+    color: $secendary_color;
+  }
+  .product-tab-buttons button:not(:last-child) {
+    margin-right: 10px;
+  }
+  .product-tab-buttons button i {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .product-tab-buttons button.active {
+    background-color: $primary_color;
+    color: #fff;
+  }
+.product-views h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.product-shorting-inner {
+    .nice-select {
+        font-size: 16px;
+        height: 50px;
+        line-height: 50px;
+        background-color: #f6f6f6;
+        &::after {
+            border-bottom: 1px solid #707480;
+            border-right: 1px solid #707480;
+            height: 8px;
+            width: 8px;
+        }
+        .list {
+            left: auto;
+            right: 0;
+        }
+    }
+}
+
+
+.karx-shop-pagination {
+    ul {
+        li {
+            display: inline-block;
+            span {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                display: inline-block;
+                border-radius: 50px;
+                cursor: pointer;
+                transition: 0.3s;
+                font-size: 16px;
+                font-weight: 500;
+                color: $secendary_color;
+                background-color: #f2f2f2;
+            }
+            &:not(:last-child) {
+                span {
+                    margin-right: 5px;
+                }
+            }
+            &:hover {
+                span {
+                    background-color: $primary_color;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

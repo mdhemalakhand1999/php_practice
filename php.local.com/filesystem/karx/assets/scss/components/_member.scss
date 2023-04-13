@@ -1,0 +1,148 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/*
+************
+*************************
+13. Member
+******************************************************* 
+*************************************************************** */
+
+.karx-member-custom-row {
+    display: flex;
+    justify-content: center;
+}
+
+.karx-member-name {
+    .karx-member-name-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        @media #{$xxl,$xl,$lg,$md}{
+            font-size: 24px;
+        }
+        a {
+            color: $secendary_color;
+            &:hover {
+                color: $primary_color;
+            }
+        }
+    }
+    p {
+        font-size: 16px;
+        margin-bottom: 0;
+        letter-spacing: 1px;
+    }
+}
+
+
+.karx-member-link {
+    a {
+        display: inline-block;
+        font-size: 15px;
+        background: $light-bg;
+        margin: 0px 5px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0;
+    }
+}
+
+.karx-member-link a:hover {
+    background: $primary_color;
+    color: $white-color;
+}
+
+@media #{$xxl,$xl}{
+    .karx-member-area.pb-120.pt-80 {
+        padding-top: 11px;
+        padding-bottom: 80px;
+      }
+}
+
+// hover animation
+.karx-member-img{
+    overflow:hidden
+}
+.karx-member-img img{
+    transform: scale(1);
+    transition: all 0.9s;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+
+// ------------- home page 2 ----------------------
+
+.karx-member-box-2 {
+    position: relative;
+    overflow: hidden;
+
+    .karx-member-img {
+        width: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .karx-member-name {
+        position: absolute;
+        bottom: -20%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        visibility: hidden;
+        opacity: 0;
+        @include transition(.3s);
+        padding: 30px;
+        padding-bottom: 20px;
+        margin: 0 30px;
+        @media #{$xxxl} {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin: 0 20px;
+        }
+        @media #{$xxl} {
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: 0 10px;
+        }
+        @media #{$xs, $lg} {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin: 0 20px;
+        }
+        @media #{$sm} {
+            padding-left: 30px;
+            padding-right: 30px;
+            margin: 0 30px;
+        }
+
+        p {
+            text-transform: uppercase;
+            color: $primary_color;
+        }
+    }
+    .karx-member-link {
+
+        a {
+            background: none;
+            margin: 0;
+
+            &:hover {
+                color: $primary_color;
+            }
+        }
+    }
+    &:hover {
+        .karx-member-name {
+            visibility: visible;
+            opacity: 1;
+            bottom: 0;
+        }
+    }
+}

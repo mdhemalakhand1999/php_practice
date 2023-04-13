@@ -1,17 +1,21 @@
 <?php
 trait NumberSeriesOne {
     function NumberSeriesA() {
-        echo "Number Series A";   
+        echo "Number Series A";
+        // parent::NumberSeriesA();
     }
     function NumberSeriesB() {
         echo "Number Series B";
     }
 }
-class NumberSeries {
-    use NumberSeriesOne;
+class SomeClass {
     function NumberSeriesA() {
-        echo "Printing Number Series A";   
+        echo "Printing + Print Number Series A";   
     }
+}
+class NumberSeries extends SomeClass {
+    use NumberSeriesOne;
+    
 }
 $ns = new NumberSeries();
 $ns->NumberSeriesA();

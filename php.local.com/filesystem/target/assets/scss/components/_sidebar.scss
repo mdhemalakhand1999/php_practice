@@ -1,0 +1,87 @@
+@use '../abstracts/variables' as *;
+
+/*
+************
+*************************
+22. Sidebar
+******************************************************* 
+*************************************************************** */
+
+.mean-container .mean-nav {
+    @media #{$md,$xs}{
+    background: transparent none repeat scroll 0 0;
+    }
+}
+.mean-container .mean-nav ul li a{
+    font-size: 15px;
+    border-top: 1px solid #ffffff26;
+}
+.mean-container .mean-nav ul li a.mean-expand{
+    @media #{$md,$xs}{
+        padding: 7px 12px;
+        border-color:#2c2a2a;
+        }
+        &:hover{
+            background: #010824;
+        }
+}
+.side-info-close{
+    border: 0;
+    background-color: transparent;
+    font-size: 25px;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.contact-list.mobile_contact h4{
+    font-size: 24px;
+    color:#fff;
+    margin-bottom: 25px;
+}
+
+.contact-list.mobile_contact i {
+    width: 40px;   
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    margin-right: 10px;
+    flex: 0 0 40px;
+    max-width: 40px;
+}
+.contact-list.mobile_contact > span, .contact-list.mobile_contact a {
+    font-size: 16px;
+    color: #cacaca;
+  }
+
+  .contact-list.mobile_contact > span, .contact-list.mobile_contact a {
+    display: flex;
+    margin-bottom: 15px;
+    text-decoration: none;
+    align-items: center;
+    font-size: 16px;
+    color: #cacaca;
+  }
+  .mean-container .mean-nav ul li li a {
+    opacity: 1;
+  }
+  .contact-list.mobile_contact a {
+    &:hover {
+        color: $primary_color;
+    }
+  }
+  .footer_social.offset_social a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin-right: 5px;
+    color: #fff;
+    &:hover {
+        background-color: $primary_color;
+        color: #fff;
+    }
+  }
