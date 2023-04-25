@@ -1,0 +1,55 @@
+.register-vocabolary-box {
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    padding: 60px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.register-vocabolary-box input {
+    width: 100%;
+    border: 1px solid #ddd;
+    margin-top: 6px;
+    height: 40px;
+    padding: 0 20px;
+}
+
+.register-vocabolary-box .form-group:not(:last-child) {margin-bottom: 30px;margin-top: 30px;}
+
+.register-vocabolary-box label {
+    font-weight: 500;
+}
+
+.register-vocabolary-box input:focus {
+    outline: 0;
+    border-color: #222;
+}
+
+.vocabolary-links a {
+    color:  orangered;
+}
+.vocabolary-links {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 110px;
+}
+
+.left-side {
+    height: 100vh;
+    background: #f2f2f2;
+    padding: 40px;
+}
+
+.left-side a {
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.left-side h1 {
+    margin-bottom: 40px;
+}
+.content-panel {
+    padding: 60px;
+    margin-top: 60px;
+}

@@ -1,0 +1,1 @@
+query -> TRUNCATE TABLE tasks ( used for serilize id in sql )
