@@ -1,4 +1,7 @@
 <?php
+/**
+ * Debug backtrace basically use for get error source hirarchically. 
+ */
 function x($a) {
     y($a);
 }
